@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Day-1</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">SELECTORS</h1>
+    <h2 class="subheading">Universal Selectors</h2>
+    <p class="universal">
+      a universal selector applies to all the elements in the html. it is
+      defined as * {} and contains in it properties that define the entire doc.
+      like for example background-color = yellow , color = black
+    </p>
+    <h2 class="subheading">Type Selectors</h2>
+    <div>
+      In CSS, inbuilt HTML elements like span, div, and paragraph can be
+      directly modified using their tag names. This means that you can apply
+      styles directly to these elements without needing to create a custom class
+      or id. For example, you can use the following rules to style all span
+      elements with white text and all div elements with black text span {color:
+      white;} , div {color: black;}. However, for user-made elements like
+      "universal",or "subheading" they must be specified as a class or id within
+      an inbuilt HTML element to take effect. This allows for more precise
+      control over the styling of your HTML document and the ability to reuse
+      styles across multiple elements. For example: div
+      class="universal-selector">a universal selector applies to all the
+      elements in the html div> Then, add the appropriate style rules for the
+      "universal-selector" class in your CSS file: .universal-selector{
+      background-color: yellow; color: black; }
+    </div>
+    <h2 class="subheading">Class selectors</h2>
+    <p class="class">
+      As mentioned above any custom element must be added as a class selector.
+      Note the syntax for Class selectors start with a period followed by the
+      case-sensitive value of the class attribute. You can apply multiple
+      classes to an element using a space-separated list. Avoid using spaces in
+      class names, use hyphens instead for multi-worded names.
+    </p>
+    <h2 class="subheading">ID selectors</h2>
+    <p id="theid">
+      ID selectors target elements by their unique ID attribute. Unlike class
+      selectors, only one element can have a specific ID on a webpage. This
+      makes them useful for selecting a single, distinct element. Just like
+      class names, avoid using spaces in IDs and use hyphens instead. Use
+      hashtag + case-sensitive value for ID selectors. Be cautious not to
+      overuse IDs, classes can be used instead in many cases. While there are
+      valid uses for IDs like specificity and section links, use them sparingly.
+    </p>
+    <h2 class="subheading">Grouping selector</h2>
+    <p class="group selector">
+      You can group two selectors that share common style declarations into a
+      comma-separated list: .read, .unread {background-color:black;}
+    </p>
+    <p class="group">This helps in cut down on the repetition</p>
+    <h2 class="chain selector">Chaining selectors</h2>
+    <p class="selector">
+      Chaining selectors allows you to target specific elements based on
+      multiple class or ID combinations. It's useful when you want to apply
+      unique styles to elements with multiple classes or IDs. For example,
+      .subsection.header targets elements with both the 'subsection' and
+      'header' classes. Be cautious not to chain more than one type selector as
+      it won't work since an element can't be two different types at once.
+    </p>
+    <div class="decendent">
+    <h2 class="combinator">DC or Decendent Combinator</h2>
+    <p class="combinator">
+      The Descendant Combinator in CSS, represented by a single space between
+      selectors, establishes a relationship where an element is selected only if
+      it has an ancestor matching the previous selector. For example, in the
+      given CSS rule `.ancestor .contents`, it selects elements with the class
+      `contents` only if they have an ancestor with the class `ancestor`.
+      Nesting depth doesn't matter; the child is selected as long as it is
+      inside the specified ancestor. In the provided HTML example, elements B
+      and C, both having the class `contents` and nested inside the `.ancestor`
+      element, would be selected. However, element D, having the class
+      `contents` but not having an ancestor with the class `ancestor`, would not
+      be selected. It's possible to chain multiple combinators in a rule, like
+      `.one .two .three .four`, which selects an element with the class `four`
+      if it has ancestors with classes `three`, `two`, and `one`. However, it's
+      generally recommended to avoid excessive nesting in selectors as it can
+      become confusing, lengthy, and may lead to specificity issues.
+    </p>
+  </div>
+  <h1 class="heading">Properties to get started with</h1>
+  <p class="group select">
+    <ul>font-family</ul>
+    <ul>font-size</ul>
+    <ul>font-weight</ul>
+    <ul>text-align</ul>
+    <ul>color</ul>
+    <ul>background-color</ul>
+  </p>
+  </body>
+</html>

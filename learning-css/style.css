@@ -1,0 +1,40 @@
+* {
+  background-color: black;
+  color: lightcoral;
+}
+.heading {
+  color: goldenrod;
+  text-align: center;
+}
+.subheading {
+  color: coral;
+  text-align: left;
+}
+p {
+  color: lightskyblue;
+}
+.universal {
+  background-color: lightyellow;
+  color: black;
+  font-size: large;
+}
+div {
+  color: cornflowerblue;
+}
+.class{
+    color: turquoise;
+}
+#theid {    
+  color: lawngreen;
+}
+.group,
+.select {
+    color: darkslateblue;
+    background-color: peru;
+}
+.chain.selector {
+  color: firebrick;
+}
+.decendent .combinator{
+  color: teal;
+}
